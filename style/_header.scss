@@ -1,0 +1,239 @@
+.header {
+    margin-top: 0;
+}
+
+div.grid-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+    grid-gap: 5px;
+}
+
+div.logo-container {
+    grid-area: 1 / 1 / 1 / 22;
+    z-index: 100;
+    max-height: 6rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+
+    & .logo-text {
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 1rem;
+        background: black;
+        height: 100%;
+        padding: 10px;
+        padding-top: 2rem;
+
+    }
+
+    & nav.nav ul {
+        display: flex;
+        list-style: none;
+
+
+        & a {
+            font-size: 1.3rem;
+            text-decoration: none;
+            color: black;
+            margin-right: 3rem;
+
+            & span.cart-items {
+                font-size: 0.8rem;
+                margin-left: -0.8rem;
+                position: relative;
+                top: -75%;
+                color: white;
+                background: red;
+                padding: 3px 5px;
+                border-radius: 60%;
+
+            }
+        }
+
+    }
+}
+
+div.fixed-navbar {
+    position: fixed;
+    background-color: black;
+    padding: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    color: white;
+    width: 100%;
+    z-index: 300;
+
+    & p.logo-text {
+        padding-top: 1rem;
+    }
+
+    & nav.nav ul li a {
+        color: white;
+
+    }
+}
+
+@media only screen and (min-width: 2400px) {
+    div.fixed-navbar {
+        width: 60%;
+    }
+}
+
+div.social-links-container {
+    grid-area: 5 / 1 / 9 / 1;
+    background-color: black;
+    max-width: rem;
+    color: white;
+
+    & ul.social-links {
+        margin-top: 1rem;
+        display: grid;
+        justify-content: center;
+        margin-left: -5px;
+        align-content: space-around;
+        height: 90%;
+
+        & li {
+            list-style: none;
+
+            & a.social-link {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+
+div.img-container {
+    grid-area: 3 / 4 / 12 / 11;
+    z-index: 100;
+    background-image: url("/imgs/alex-iby-Pd585pphU-4-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    outline: 2rem solid rgba(63, 62, 62, 0.534);
+    outline-offset: 2rem;
+}
+
+
+div.right-side {
+    grid-area: 1 / 10 / 13 / 22;
+    background-color: #c78283; // #f4a688; //efa098
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    & div.header-text-wrapper {
+        width: 65%;
+        text-align: center;
+        margin-left: 20%;
+        color: white;
+        line-height: 2.5rem;
+
+        & div.centered-text {
+
+            margin-bottom: 3rem;
+
+
+            & h2 {
+                font-size: 4rem;
+                margin-bottom: 3rem;
+                text-transform: uppercase;
+                line-height: 4rem;
+            }
+
+        }
+
+        & div.button-wrapper a.cta-buttons {
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+            text-transform: uppercase;
+            background-color: black;
+            padding: 1rem 3rem;
+            margin: 4rem 2rem 4rem;
+            transition: all 0.5s;
+
+            & span {
+                display: none;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: rgb(253, 253, 253);
+                color: black;
+
+                & span {
+                    display: contents;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    div.right-side {
+
+        & div.header-text-wrapper {
+            width: 65%;
+            text-align: center;
+            margin-left: 20%;
+            margin-top: 5rem;
+            color: white;
+            line-height: 2rem;
+            font-size: 1.5rem;
+
+            & div.centered-text {
+
+                margin-bottom: 1rem;
+
+
+                & h2 {
+                    font-size: 3rem;
+                    margin-bottom: 1.5rem;
+                    line-height: 3rem;
+                }
+
+            }
+
+            & div.button-wrapper a.cta-buttons {
+                padding: 1rem 3rem;
+                margin: 1rem;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    div.img-container {
+        display: none;
+    }
+
+    div.social-links-container {
+        z-index: 100;
+        grid-area: 5 / 1 / 9 / 3;
+        max-width: 3rem;
+
+        & ul.social-links {
+            margin-left: 0;
+        }
+    }
+
+        div.right-side {
+            grid-area: 1 / 1 / -1 / -1;
+        }
+
+
+
+
+}

@@ -1,0 +1,139 @@
+div.style-info-container {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12rem;
+    text-align: center;
+
+
+    & div.info-section {
+        margin: 3rem 0rem;
+        display: flex;
+        justify-content: space-between;
+
+        & div.style-info-img-container {
+            width: 35%;
+            max-height: 40rem;
+            overflow: hidden;
+            text-align: center;
+
+            & img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                max-height: 300px;
+            }
+
+        }
+
+        & div.style-info-text-container {
+            width: 40%;
+            display: flex;
+            align-items: center;
+
+            & h2.style-info-text-heading {
+                color: $color-text-headings;
+                text-transform: uppercase;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+
+            }
+
+            & p.style-info-text-details {
+                margin: 2rem 0rem;
+                color: $color-text-content;
+
+                & a {
+                    color: $bg-peach;
+
+                    &:hover {
+                        color: white;
+                        text-decoration: none;
+                        background-color: $bg-peach;
+
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+    & #info-section-2 {
+
+        margin: 12rem 0;
+
+        & #second-section {
+            order: 10;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+    div.style-info-container {
+        width: 70%;
+
+        & div.info-section {
+
+            & div.style-info-img-container {
+                width: 39%;
+
+            }
+
+        }
+
+    }
+
+}
+
+
+@media only screen and (max-width: 730px) {
+    div.style-info-container {
+        width: 85%;
+
+    }
+
+}
+
+
+
+@media only screen and (max-width: 560px) {
+    section.style-info{
+        margin-top: 5rem;
+    }
+
+    div.style-info-container {
+        
+        & div.info-section {
+            flex-direction: column;
+            align-items: center;
+
+            & div.style-info-img-container {
+                width: 75%;
+                margin-bottom: 2rem;
+                & img {
+                    max-height: 350px;
+                }
+
+            }
+
+            & div.style-info-text-container {
+                width: 75%;
+            }
+
+
+        }
+
+        & #info-section-2 {
+            margin: 5rem 0;   
+            & #second-section {
+                order: 0;
+            }
+        }
+
+    }
+}

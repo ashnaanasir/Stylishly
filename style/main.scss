@@ -1,0 +1,33 @@
+@import "base";
+@import "typography";
+@import "variables";
+
+@import "header";
+@import "style-info";
+@import "just-in";
+@import "top-picks";
+@import "subscription-cta";
+@import "categories";
+@import "footer";
+
+
+/*
+    STRUCTURE OF FILES:
+
+    two options I have:
+    either divide it by sections or divide it by type (like components and layout). i think sections is way more appropriate. 
+    use this:
+    
+    -base 
+    -typography
+    -variables
+
+    section 1: header
+    section 2: style info - picture + text describing stuff
+    section 3: just in
+    section 4: top picks
+    section 5: Subscription section
+    section 6: categories
+    section 7: footer
+
+*/

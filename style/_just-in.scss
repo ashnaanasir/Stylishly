@@ -1,0 +1,31 @@
+section.just-in {
+
+    margin-top: 15rem;
+    text-align: center;
+
+    & h2.just-in-heading {
+        text-transform: uppercase;
+        color: $color-text-headings;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        margin: 2rem;
+    }
+
+    & div.just-in-container {
+
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        overflow-y: hidden;
+        min-height: 30rem;
+
+        & div.just-in-item {
+            min-width: 350px;
+            margin-right: 5rem;
+            max-height: 350px;
+            background-color: #7c7979;
+        }
+    }
+
+}
+

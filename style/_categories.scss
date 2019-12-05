@@ -1,0 +1,50 @@
+section.categories {
+
+    min-height: 100%;
+    
+    & h2.categories-heading{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+    }
+
+    & div.categories-container{
+        margin: 3rem 3rem;
+        display: flex;
+        justify-content: space-around;
+        font-family: 'Montserrat', sans-serif;
+        
+        & div.category-list{
+
+            width: 15%;
+
+            & h4.category-heading{
+                color: $color-text-headings;
+                text-transform: uppercase;
+                font-weight: 400;
+                margin-bottom: 8px;
+            }
+
+            & ul {
+                margin: 0 auto;
+
+                & li {
+
+                     list-style: none;
+
+                     & a {
+                         text-decoration: none;
+                         color: $color-text-content;
+
+                         &:hover {
+                             text-decoration: underline;
+                         }
+
+                     }
+                 }
+            }
+        }
+    }
+}
