@@ -1,8 +1,8 @@
 section.categories {
 
     min-height: 100%;
-    
-    & h2.categories-heading{
+
+    & h2.categories-heading {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         text-align: center;
@@ -10,17 +10,17 @@ section.categories {
         margin-bottom: 5rem;
     }
 
-    & div.categories-container{
+    & div.categories-container {
         margin: 3rem 3rem;
         display: flex;
         justify-content: space-around;
         font-family: 'Montserrat', sans-serif;
-        
-        & div.category-list{
+
+        & div.category-list {
 
             width: 15%;
 
-            & h4.category-heading{
+            & h4.category-heading {
                 color: $color-text-headings;
                 text-transform: uppercase;
                 font-weight: 400;
@@ -32,19 +32,47 @@ section.categories {
 
                 & li {
 
-                     list-style: none;
+                    list-style: none;
 
-                     & a {
-                         text-decoration: none;
-                         color: $color-text-content;
+                    & a {
+                        text-decoration: none;
+                        color: $color-text-content;
 
-                         &:hover {
-                             text-decoration: underline;
-                         }
+                        &:hover {
+                            text-decoration: underline;
+                        }
 
-                     }
-                 }
+                    }
+                }
             }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 610px) {
+    section.categories {
+
+        & div.categories-container {
+            margin: 3rem 0rem;
+
+            & div.category-list {
+
+                width: 22%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    section.categories {
+        width: 90%;
+        & div.categories-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-items: center;
+            
         }
     }
 }
