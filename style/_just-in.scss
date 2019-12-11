@@ -18,12 +18,25 @@ section.just-in {
         overflow: hidden;
         overflow-y: hidden;
         min-height: 30rem;
+        padding: 0 2rem;
 
         & div.just-in-item {
-            min-width: 350px;
-            margin-right: 5rem;
-            max-height: 350px;
-            background-color: #7c7979;
+            margin: 1rem;
+            & div.item-img{
+                width:200px;
+                height: auto;
+                & img {
+                    width: 100%;
+                }
+            }
+            & div.item-description {
+                display: flex;
+                margin: .8rem 0;
+                justify-content: space-between;
+                color: $color-text-content;
+                font-weight: 300;
+            }
+
         }
     }
 

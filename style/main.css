@@ -437,13 +437,32 @@ section.just-in div.just-in-container {
   overflow: hidden;
   overflow-y: hidden;
   min-height: 30rem;
+  padding: 0 2rem;
 }
 
 section.just-in div.just-in-container div.just-in-item {
-  min-width: 350px;
-  margin-right: 5rem;
-  max-height: 350px;
-  background-color: #7c7979;
+  margin: 1rem;
+}
+
+section.just-in div.just-in-container div.just-in-item div.item-img {
+  width: 200px;
+  height: auto;
+}
+
+section.just-in div.just-in-container div.just-in-item div.item-img img {
+  width: 100%;
+}
+
+section.just-in div.just-in-container div.just-in-item div.item-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: .8rem 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #817b7b;
+  font-weight: 300;
 }
 
 section.categories {
