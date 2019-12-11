@@ -1,9 +1,180 @@
 footer{
-    margin-top: 15rem;
+    margin-top: 10rem;
     background: black;
-    height: 60vh;
+    padding-top: 5rem;
+    height: 100%;
     width: 100%;
-    color: white;
+    color: #817b7b;
     font-family: 'Montserrat', sans-serif;
     
+    & div.footer-container {
+        display: flex;
+        justify-content: space-between;
+
+        & div.company-info{
+            width: 25%;
+            padding: 1rem;
+            
+            & h3{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+                margin-bottom: .5rem;
+                font-size: 3rem;
+                letter-spacing: 4px;
+                color: white;
+            }
+
+            & > p {
+                margin-bottom: 5px;
+                font-weight: 300;
+            }
+
+            & div.contact-container{
+                & p {
+                    margin-bottom: 5px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        & div.footer-links {
+            width: 20%;
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+
+            & li {
+                list-style: none;
+
+                & a {
+                    text-decoration: none;
+                    color: inherit;
+                    
+                }
+
+                & a:hover{
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        & div.footer-subscription-box {
+            width: 35%;
+            padding: 2rem 0rem 4rem;
+
+            & h3 {
+                font-weight: 400;
+                text-transform: uppercase;
+                margin-bottom: .5rem;
+                color: white;
+            }
+
+            & p {
+                margin-bottom: 2rem;
+            }
+
+            & div.email-cta{
+                display: flex;
+                & input[type="text"] {
+                    width: 70%;
+                    border: none;
+                    padding: 1.5rem 1rem;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                & a.subscribe-cta {
+                    margin-right: 1rem;
+                    width: 30%;
+                    text-decoration: none;
+                    text-align: center;
+                    padding: 1.5rem 1rem;
+                    color: white;
+                    background-color: $bg-peach;
+                }
+            }
+            
+
+        
+        }
+
+    }
+
+    & div.social-links-footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0;
+        color: white;
+        text-align: center;
+        & div.social-container {
+            width: 6vw;
+            min-width: 50px;
+
+            & i {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}  
+
+
+@media only screen and (max-width: 1000px) {
+    a.subscribe-cta {
+        padding: none;
+        font-size: 1.2rem;
+        margin-right: 0 !important; //need !important as it has less specificity than the other styling
+    }
+
 }
+
+
+@media only screen and (max-width: 730px) {
+    footer {
+
+        & div.footer-container {
+            flex-direction: column;
+            align-items: center;
+
+            & div.company-info {
+                width: 80%;
+            
+                & h3 {
+                    text-align: center
+                }
+
+                &>p {
+                    text-align: center
+                }
+
+                & div.contact-container {
+                    text-align: center;
+                }
+            }
+
+            & div.footer-links {
+                width: 80%;
+                justify-content: center;
+                margin-bottom: 5rem;
+                & #footer-links-1 {
+                    margin-right: 5rem;
+                }
+
+            }
+
+            & div.footer-subscription-box {
+                width: 80%;
+                padding: 2rem 0rem 4rem;
+            }
+
+        }
+
+        & div.social-links-footer {
+            justify-content: space-around;
+        }
+    }
+}
+

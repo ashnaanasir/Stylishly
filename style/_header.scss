@@ -115,7 +115,7 @@ div.social-links-container {
 div.img-container {
     grid-area: 3 / 4 / 12 / 11;
     z-index: 100;
-    background-image: url("/imgs/alex-iby-Pd585pphU-4-unsplash.jpg");
+    background-image: url("/imgs/standing-woman-wearing-orange-button-collared-top-near-red-1852382.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -126,7 +126,7 @@ div.img-container {
 
 div.right-side {
     grid-area: 1 / 10 / 13 / 22;
-    background-color: #c78283; // #f4a688; //efa098
+    background-color: $bg-peach; //#a06d81; // #f4a688; //efa098
     display: grid;
     justify-content: center;
     align-content: center;
