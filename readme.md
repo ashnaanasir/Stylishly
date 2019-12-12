@@ -6,11 +6,11 @@ Website Goal:
 - Tech Used:
     *HTML5
     *CSS
-    *SASS
+    *SASS 
     *JAVASCRIPT
-    *Libraries: glider js
+    *Libraries: slick js
 
 RESOURCES USED: 
 - Unsplash and Pexel (for stock images)
 - www.favicon-generator.org (for tab icon)
-- Fonts (montserrat, raleway) from google fonts. https://github.com/ayeshanasir/Stylishly/blob/master/readme.md
+- Fonts (montserrat, raleway) from google fonts. 
