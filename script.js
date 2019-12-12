@@ -1,3 +1,4 @@
+//navbar appear on scroll functionality
 let navbar = document.getElementById('nav-bar');
 let navheight = navbar.offsetTop;
 
@@ -9,3 +10,29 @@ window.addEventListener('scroll', function(){
     }
 });
 
+
+//product slider  - uses jquery
+
+ $(document).ready(function () {
+     $('.just-in-container').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        swipeToSlide: true,
+        prevArrow: '.arrow-prev',
+        nextArrow: '.arrow-next',
+        responsive: [
+            {
+                breakpoint: 1450,
+                settings: {
+                    slidesToShow: 4,
+                }
+            }, 
+        
+            {
+                breakpoint: 1160,
+                settings: "unslick"
+            }
+    ]
+     });
+ });

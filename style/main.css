@@ -434,30 +434,49 @@ section.just-in div.just-in-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  overflow: hidden;
-  overflow-y: hidden;
   min-height: 30rem;
   padding: 0 2rem;
+  min-width: 270px;
 }
 
 section.just-in div.just-in-container div.just-in-item {
   margin: 1rem;
+  border: 1px solid #eee;
+  min-width: 250px;
+  height: 100%;
+  padding: 2rem 1rem;
+}
+
+section.just-in div.just-in-container div.just-in-item:hover {
+  -webkit-box-shadow: 2px 2px 10px rgba(58, 56, 56, 0.171);
+          box-shadow: 2px 2px 10px rgba(58, 56, 56, 0.171);
+}
+
+section.just-in div.just-in-container div.just-in-item:hover div.item-img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 section.just-in div.just-in-container div.just-in-item div.item-img {
-  width: 200px;
-  height: auto;
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
 }
 
 section.just-in div.just-in-container div.just-in-item div.item-img img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: -4rem;
 }
 
 section.just-in div.just-in-container div.just-in-item div.item-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: .8rem 0;
+  margin-top: 1.5rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -465,7 +484,53 @@ section.just-in div.just-in-container div.just-in-item div.item-description {
   font-weight: 300;
 }
 
+section.just-in div.just-in-container div.just-in-item div.item-description p.item-title {
+  color: black;
+  text-transform: uppercase;
+}
+
+section.just-in div.just-in-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  top: -20rem;
+}
+
+section.just-in div.just-in-nav div.arrow {
+  padding: 0 1rem;
+  z-index: 9999;
+}
+
+@media only screen and (max-width: 1100px) {
+  section.just-in div.just-in-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.just-in div.just-in-nav {
+    display: none;
+  }
+  section.just-in div.just-in-nav div.arrow {
+    display: none;
+    height: 0px;
+  }
+}
+
 section.categories {
+  margin-top: 10rem;
   min-height: 100%;
 }
 
